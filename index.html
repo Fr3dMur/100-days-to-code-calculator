@@ -16,10 +16,18 @@
 
             </div> -->
             <div class="buttons">
+                <p>Dame un numero</p>
                 <input type="number" class="arg1" id="arg1">
-                <p>+</p>
+                <p>Dame otro numero</p>
                 <input type="number" class="arg2" id="arg2">
-                <p>=</p>
+                <p>Que operacion quieres realizar?</p>
+                <div class="botones">
+                    <button class="button"><b>+</b></button>
+                    <button class="button"><b>-</b></button>
+                    <button class="button"><b>*</b></button>
+                    <button class="button"><b>%</b></button>
+
+                </div>
                 <div class="screen" id="screen"></div>
 
                 <!-- <button class="button clear"><b>C</b></button>
@@ -35,7 +43,7 @@
                 <button class="button">0</button>
                 <button class="button plus"><b>+</b></button>
                 <button class="button equal"><b>=</b></button> -->
-                <button id="submit" class="submit" onclick="getValue()">On click</button>
+                <button id="submit" class="submit" onclick="getValue()">=</button>
             </div>
         </div>
     </main>

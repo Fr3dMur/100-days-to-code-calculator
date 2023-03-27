@@ -23,7 +23,7 @@ main {
 
 .container{
     width: 300px;
-    height: 200px;
+    height: 300px;
     border: 1px solid #000;
     display: grid;
     place-content: center;
@@ -47,6 +47,18 @@ input{
 .submit{
     display: block;
     width: 100%;
+}
+
+.botones{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .5rem;
+    padding: .5rem;
+}
+
+.button{
+   text-align: center;
+   padding: 3px;
 }
 
 /* .buttons{
