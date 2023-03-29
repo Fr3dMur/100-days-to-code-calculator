@@ -16,33 +16,33 @@
 
             </div> -->
             <div class="buttons">
-                <p>Dame un numero</p>
-                <input type="number" class="arg1" id="arg1">
-                <p>Dame otro numero</p>
-                <input type="number" class="arg2" id="arg2">
-                <p>Que operacion quieres realizar?</p>
-                <div class="botones">
-                    <button class="button arith" id="arith1" onclick="getSymbol(arith1)"><b>+</b></button>
-                    <button class="button arith" id="arith2" onclick="getSymbol(arith2)"><b>-</b></button>
-                    <button class="button arith" id="arith3" onclick="getSymbol(arith3)"><b>*</b></button>
-                    <button class="button arith" id="arith4" onclick="getSymbol(arith4)"><b>%</b></button>
-                </div>
                 <div class="screen" id="screen"></div>
 
-                <!-- <button class="button clear"><b>C</b></button>
-                <button class="button">1</button>
-                <button class="button">2</button>
-                <button class="button">3</button>
-                <button class="button">4</button>
-                <button class="button">5</button>
-                <button class="button">6</button>
-                <button class="button">7</button>
-                <button class="button">8</button>
-                <button class="button">9</button>
-                <button class="button">0</button>
-                <button class="button plus"><b>+</b></button>
-                <button class="button equal"><b>=</b></button> -->
-                <button id="submit" class="submit" onclick="getValue()">=</button>
+             
+                
+                <div class="botones">
+                    <button class="button clear" id="clear" onclick="getKey('clear')"><b>C</b></button>
+                    <button class="button clear" id="clear1" onclick="getKey('clear1')"><b>CE</b></button>
+                    <button class="button" id="number1" onclick="getKey('number1')">1</button>
+                    <button class="button arith" id="arith1" onclick="getKey('arith1')"><b>+</b></button>
+
+                    <button class="button" id="number2" onclick="getKey('number2')">2</button>
+                    <button class="button" id="number3" onclick="getKey('number3')">3</button>
+                    <button class="button" id="number4" onclick="getKey('number4')">4</button>
+                    <button class="button arith" id="arith2" onclick="getKey('arith2')"><b>-</b></button>
+
+                    <button class="button" id="number5" onclick="getKey('number5')">5</button>
+                    <button class="button" id="number6" onclick="getKey('number6')">6</button>
+                    <button class="button" id="number7" onclick="getKey('number7')">7</button>
+                    <button class="button arith" id="arith3" onclick="getKey('arith3')"><b>*</b></button>
+
+                    <button class="button" id="number8" onclick="getKey('number8')">8</button>
+                    <button class="button" id="number9" onclick="getKey('number9')">9</button>
+                    <button class="button" id="number0" onclick="getKey('number0')">0</button>
+                    <button class="button arith" id="arith4" onclick="getKey('arith4')"><b>%</b></button>
+                </div>
+
+                <button id="submit" class="submit" onclick="getResult()">=</button>
             </div>
         </div>
     </main>
