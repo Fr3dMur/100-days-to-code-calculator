@@ -4,18 +4,24 @@ const screen = document.getElementById("screen")
 let operation = [];
 
   // Function to print the value in screen
-  const print = (a) => {
+const print = (a) => {
     document.getElementById("screen").innerHTML = a;
 };
 
+//   Function to save and print when a number button is click it
+const printNumber = () => {
+    operation.push(buttonContent.innerHTML);
+    print(buttonContent.innerHTML);
+}
+
 let operator;
+let buttonContent;
 
 const getKey = (buttonId) => {
 
-   let buttonContent;
-  
     // Conditional to search for the value of button that was clicked
     switch (buttonId) {
+        // Arithmetcs bottons
         case "arith1" :
             buttonContent = document.getElementById("arith1");
             operation.push(buttonContent.innerText);
@@ -48,66 +54,58 @@ const getKey = (buttonId) => {
             print(buttonContent.innerHTML);
             break;
 
+        // Number buttons
          case "number1" :
             buttonContent = document.getElementById("number1");
-            operation.push(buttonContent.innerHTML);
-            print(buttonContent.innerHTML);
+            printNumber();
             break;
 
         case "number2" :
             buttonContent = document.getElementById("number2");
-            operation.push(buttonContent.innerHTML);
-            print(buttonContent.innerHTML);
+            printNumber();
             break;
 
         case "number3" :
             buttonContent = document.getElementById("number3");
-            operation.push(buttonContent.innerHTML);
-            print(buttonContent.innerHTML);
+            printNumber();
             break;
 
         case "number4" :
             buttonContent = document.getElementById("number4");
-            operation.push(buttonContent.innerHTML);
-            print(buttonContent.innerHTML);
+            printNumber();
             break;
 
      case "number5" :
             buttonContent = document.getElementById("number5");
-            operation.push(buttonContent.innerHTML);
-            print(buttonContent.innerHTML);
+            printNumber();
             break;
 
         case "number6" :
             buttonContent = document.getElementById("number6");
-            operation.push(buttonContent.innerHTML);
-            print(buttonContent.innerHTML);
+            printNumber();
             break;
 
         case "number7" :
             buttonContent = document.getElementById("number7");
-            operation.push(buttonContent.innerHTML);
-            print(buttonContent.innerHTML);
+            printNumber();
             break;
 
         case "number8" :
             buttonContent = document.getElementById("number8");
-            operation.push(buttonContent.innerHTML);
-            print(buttonContent.innerHTML);
+            printNumber();
             break;
 
         case "number9" :
             buttonContent = document.getElementById("number9");
-            operation.push(buttonContent.innerHTML);
-            print(buttonContent.innerHTML);
+            printNumber();
             break;
 
         case "number0" :
             buttonContent = document.getElementById("number0");
-            operation.push(buttonContent.innerHTML);
-            print(buttonContent.innerHTML);
+            printNumber();
             break;
 
+        // Erase buttons
         case "clear" :
             buttonContent = document.getElementById("clear");
             operation = [];
@@ -117,9 +115,6 @@ const getKey = (buttonId) => {
             buttonContent = document.getElementById("clear1");
             operation.pop();
             break;
-
-        default :
-            console.log("Give a value");
     }
 
     print(operation.join(""))
