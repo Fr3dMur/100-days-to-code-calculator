@@ -8,101 +8,100 @@ const print = (a) => {
     document.getElementById("screen").innerHTML = a;
 };
 
-//   Function to save and print when a number button is click it
-const printNumber = () => {
-    operation.push(buttonContent.innerHTML);
-    print(buttonContent.innerHTML);
-}
-
 let operator;
-let buttonContent;
+let operatorIndex;
 
 const getKey = (buttonId) => {
+    let buttonContent;
 
+//   Function to save and print when a number button is click it
+    const savePrint = () => {
+        operation.push(buttonContent.innerText);
+        print(buttonContent.innerText);
+    }
+
+// Function to get index & sign for the operation
+    const indices = (a) => {
+        let sign = a.innerText;
+        operator = operation.find(number => number === sign);
+        operatorIndex = operation.findIndex(number => number === sign );
+    }
     // Conditional to search for the value of button that was clicked
     switch (buttonId) {
         // Arithmetcs bottons
         case "arith1" :
             buttonContent = document.getElementById("arith1");
-            operation.push(buttonContent.innerText);
-            operator = operation.find(number => number === "+");
-            operatorIndex = operation.findIndex(number => number === "+" )
-            print(buttonContent.innerHTML);
+            savePrint();
+            indices(buttonContent);
             break;
             
         case "arith2" :
             buttonContent = document.getElementById("arith2");
-            operation.push(buttonContent.innerText);
-            operator = operation.find(number => number === "-");
-            operatorIndex = operation.findIndex(number => number === "-" )
-            print(buttonContent.innerHTML);
+            savePrint();
+            indices(buttonContent);
             break;
 
         case "arith3" :
             buttonContent = document.getElementById("arith3");
-            operation.push(buttonContent.innerText);
-            operator = operation.find(number => number === "*");
-            operatorIndex = operation.findIndex(number => number === "*" )
-            print(buttonContent.innerHTML);
+            savePrint();
+            indices(buttonContent);
             break;
 
         case "arith4" :
             buttonContent = document.getElementById("arith4");
-            operation.push(buttonContent.innerText);
-            operator = operation.find(number => number === "%");
-            operatorIndex = operation.findIndex(number => number === "%" )
-            print(buttonContent.innerHTML);
+            savePrint();
+            indices(buttonContent);
             break;
 
         // Number buttons
          case "number1" :
             buttonContent = document.getElementById("number1");
-            printNumber();
+            savePrint();
             break;
 
         case "number2" :
             buttonContent = document.getElementById("number2");
-            printNumber();
+            savePrint();
             break;
 
         case "number3" :
             buttonContent = document.getElementById("number3");
-            printNumber();
+            savePrint();
             break;
 
         case "number4" :
             buttonContent = document.getElementById("number4");
-            printNumber();
+            savePrint();
             break;
 
      case "number5" :
             buttonContent = document.getElementById("number5");
-            printNumber();
+            savePrint();
             break;
 
         case "number6" :
             buttonContent = document.getElementById("number6");
-            printNumber();
+            savePrint();
             break;
 
         case "number7" :
             buttonContent = document.getElementById("number7");
-            printNumber();
+            savePrint();
             break;
 
         case "number8" :
             buttonContent = document.getElementById("number8");
-            printNumber();
+            savePrint();
             break;
 
         case "number9" :
             buttonContent = document.getElementById("number9");
-            printNumber();
+            savePrint();
             break;
 
         case "number0" :
             buttonContent = document.getElementById("number0");
-            printNumber();
+            savePrint();
             break;
 
         // Erase buttons
