@@ -8,39 +8,46 @@ let operation = [];
     document.getElementById("screen").innerHTML = a;
 };
 
+let operator;
+
 const getKey = (buttonId) => {
 
-   // Get the symbol and make the arithmetic operation
    let buttonContent;
   
-   let result ;
-
     // Conditional to search for the value of button that was clicked
     switch (buttonId) {
         case "arith1" :
             buttonContent = document.getElementById("arith1");
-            operation.push(buttonContent.innerHTML);
+            operation.push(buttonContent.innerText);
+            operator = operation.find(number => number === "+");
+            operatorIndex = operation.findIndex(number => number === "+" )
             print(buttonContent.innerHTML);
             console.log(operation);
             break;
             
         case "arith2" :
             buttonContent = document.getElementById("arith2");
-            operation.push(buttonContent.innerHTML);
+            operation.push(buttonContent.innerText);
+            operator = operation.find(number => number === "-");
+            operatorIndex = operation.findIndex(number => number === "-" )
             print(buttonContent.innerHTML);
             console.log(operation);
             break;
 
         case "arith3" :
             buttonContent = document.getElementById("arith3");
-            operation.push(buttonContent.innerHTML);
+            operation.push(buttonContent.innerText);
+            operator = operation.find(number => number === "*");
+            operatorIndex = operation.findIndex(number => number === "*" )
             print(buttonContent.innerHTML);
             console.log(operation);
             break;
 
         case "arith4" :
             buttonContent = document.getElementById("arith4");
-            operation.push(buttonContent.innerHTML);
+            operation.push(buttonContent.innerText);
+            operator = operation.find(number => number === "%");
+            operatorIndex = operation.findIndex(number => number === "%" )
             print(buttonContent.innerHTML);
             console.log(operation);
             break;
@@ -137,31 +144,65 @@ const getKey = (buttonId) => {
 
 // Function to get and print the result into the screen
 const getResult = () => {
-    print(operation);
-}
-
-// A simple calculator function when read that operation the user wants to use
-const Math = (a , b, c ) => {
-    let result ;
-
-    switch (c){
+    let arg1;
+    let arg2;
+    switch(operator) {
         case "+" :
-            result = Number(a) + Number(b);
+            arg1 = operation.slice(0 , operatorIndex);
+            console.log(arg1);
+            arg2 = operation.slice(operatorIndex + 1 )
+            console.log(arg2);
+            console.log(operator);
             break;
         case "-" :
-            result = a - b;
+            arg1 = operation.slice(0 , operatorIndex);
+            console.log(arg1);
+            arg2 = operation.slice(operatorIndex + 1)
+            console.log(arg2);
+            console.log(operator);
             break;
         case "*" :
-            result = a * b;
+            arg1 = operation.slice(0 , operatorIndex);
+            console.log(arg1);
+            arg2 = operation.slice(operatorIndex + 1 )
+            console.log(arg2);
+            console.log(operator);
             break;
-        case "/" :
-            result = a / b;
+        case "%" :
+            arg1 = operation.slice(0 , operatorIndex);
+            console.log(arg1);
+            arg2 = operation.slice(operatorIndex + 1)
+            console.log(arg2);
+            console.log(operator);
             break;
-        default :
-            result = "Give me a number"
     }
 
-    return result;
 }
 
 
+
+
+
+// A simple calculator function when read that operation the user wants to use
+// const Math = (a , b, c ) => {
+//     let result ;
+
+//     switch (c){
+//         case "+" :
+//             result = Number(a) + Number(b);
+//             break;
+//         case "-" :
+//             result = a - b;
+//             break;
+//         case "*" :
+//             result = a * b;
+//             break;
+//         case "/" :
+//             result = a / b;
+//             break;
+//         default :
+//             result = "Give me a number"
+//     }
+
+//     return result;
+// }
