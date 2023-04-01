@@ -110,14 +110,12 @@ const getKey = (buttonId) => {
 
         case "clear" :
             buttonContent = document.getElementById("clear");
-            operation.push(buttonContent.innerHTML);
-            console.log(operation);
+            operation = [];
             break;
 
         case "clear1" :
             buttonContent = document.getElementById("clear1");
-            operation.push(buttonContent.innerHTML);
-            console.log(operation);
+            operation.pop();
             break;
 
         default :
@@ -162,30 +160,3 @@ const getResult = () => {
 
 }
 
-
-
-
-
-// A simple calculator function when read that operation the user wants to use
-// const Math = (a , b, c ) => {
-//     let result ;
-
-//     switch (c){
-//         case "+" :
-//             result = Number(a) + Number(b);
-//             break;
-//         case "-" :
-//             result = a - b;
-//             break;
-//         case "*" :
-//             result = a * b;
-//             break;
-//         case "/" :
-//             result = a / b;
-//             break;
-//         default :
-//             result = "Give me a number"
-//     }
-
-//     return result;
-// }
