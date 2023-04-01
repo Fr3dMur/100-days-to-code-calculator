@@ -22,7 +22,6 @@ const getKey = (buttonId) => {
             operator = operation.find(number => number === "+");
             operatorIndex = operation.findIndex(number => number === "+" )
             print(buttonContent.innerHTML);
-            console.log(operation);
             break;
             
         case "arith2" :
@@ -31,7 +30,6 @@ const getKey = (buttonId) => {
             operator = operation.find(number => number === "-");
             operatorIndex = operation.findIndex(number => number === "-" )
             print(buttonContent.innerHTML);
-            console.log(operation);
             break;
 
         case "arith3" :
@@ -40,7 +38,6 @@ const getKey = (buttonId) => {
             operator = operation.find(number => number === "*");
             operatorIndex = operation.findIndex(number => number === "*" )
             print(buttonContent.innerHTML);
-            console.log(operation);
             break;
 
         case "arith4" :
@@ -49,77 +46,66 @@ const getKey = (buttonId) => {
             operator = operation.find(number => number === "%");
             operatorIndex = operation.findIndex(number => number === "%" )
             print(buttonContent.innerHTML);
-            console.log(operation);
             break;
 
          case "number1" :
             buttonContent = document.getElementById("number1");
             operation.push(buttonContent.innerHTML);
             print(buttonContent.innerHTML);
-            console.log(operation);
             break;
 
         case "number2" :
             buttonContent = document.getElementById("number2");
             operation.push(buttonContent.innerHTML);
             print(buttonContent.innerHTML);
-            console.log(operation);
             break;
 
         case "number3" :
             buttonContent = document.getElementById("number3");
             operation.push(buttonContent.innerHTML);
             print(buttonContent.innerHTML);
-            console.log(operation);
             break;
 
         case "number4" :
             buttonContent = document.getElementById("number4");
             operation.push(buttonContent.innerHTML);
             print(buttonContent.innerHTML);
-            console.log(operation);
             break;
 
      case "number5" :
             buttonContent = document.getElementById("number5");
             operation.push(buttonContent.innerHTML);
             print(buttonContent.innerHTML);
-            console.log(operation);
             break;
 
         case "number6" :
             buttonContent = document.getElementById("number6");
             operation.push(buttonContent.innerHTML);
             print(buttonContent.innerHTML);
-            console.log(operation);
             break;
 
         case "number7" :
             buttonContent = document.getElementById("number7");
             operation.push(buttonContent.innerHTML);
             print(buttonContent.innerHTML);
-            console.log(operation);
             break;
 
         case "number8" :
             buttonContent = document.getElementById("number8");
             operation.push(buttonContent.innerHTML);
             print(buttonContent.innerHTML);
-            console.log(operation);
             break;
 
         case "number9" :
             buttonContent = document.getElementById("number9");
             operation.push(buttonContent.innerHTML);
             print(buttonContent.innerHTML);
-            console.log(operation);
             break;
 
         case "number0" :
             buttonContent = document.getElementById("number0");
             operation.push(buttonContent.innerHTML);
             print(buttonContent.innerHTML);
-            console.log(operation);
             break;
 
         case "clear" :
@@ -144,38 +130,35 @@ const getKey = (buttonId) => {
 
 // Function to get and print the result into the screen
 const getResult = () => {
-    let arg1;
-    let arg2;
+    let result;
+
+    // To get the arguments to operate
+    let arg1 = operation.slice(0 , operatorIndex);;
+    let arg2 = operation.slice(operatorIndex + 1);
+
+    // Make array arguments to str
+    arg1 = arg1.join("");
+    arg2 = arg2.join("");
+
+    // Function to calculate
     switch(operator) {
         case "+" :
-            arg1 = operation.slice(0 , operatorIndex);
-            console.log(arg1);
-            arg2 = operation.slice(operatorIndex + 1 )
-            console.log(arg2);
-            console.log(operator);
+            result = Number(arg1) + Number(arg2);
+            print(result);
             break;
         case "-" :
-            arg1 = operation.slice(0 , operatorIndex);
-            console.log(arg1);
-            arg2 = operation.slice(operatorIndex + 1)
-            console.log(arg2);
-            console.log(operator);
+            result = arg1 - arg2;
+            print(result);
             break;
         case "*" :
-            arg1 = operation.slice(0 , operatorIndex);
-            console.log(arg1);
-            arg2 = operation.slice(operatorIndex + 1 )
-            console.log(arg2);
-            console.log(operator);
+            result = arg1 * arg2;
+            print(result);
             break;
         case "%" :
-            arg1 = operation.slice(0 , operatorIndex);
-            console.log(arg1);
-            arg2 = operation.slice(operatorIndex + 1)
-            console.log(arg2);
-            console.log(operator);
-            break;
-    }
+            result = arg1 / arg2;
+            print(result);
+            break;    
+        }
 
 }
 
